@@ -117,10 +117,12 @@ while True:
         write_score.clear()
         write_score.write("Player One: {}           Player Two: {}".format(score_one, score_two), align="center",
                           font=("Courier", 24, "normal"))
-        wid_one -= 1
-        wid_two += 1
-        paddle_one.shapesize(stretch_wid=wid_one, stretch_len=1)
-        paddle_two.shapesize(stretch_wid=wid_two, stretch_len=1)
+        
+        if (wid_one != 1 and wid_two != 1) :
+            wid_one -= 1
+            wid_two += 1
+            paddle_one.shapesize(stretch_wid=wid_one, stretch_len=1)
+            paddle_two.shapesize(stretch_wid=wid_two, stretch_len=1)
 
     if ball.xcor() < -390:   # past the paddle
         ball.goto(0, 0)
@@ -133,10 +135,11 @@ while True:
         write_score.clear()
         write_score.write("Player One: {}           Player Two: {}".format(score_one, score_two), align="center",
                           font=("Courier", 24, "normal"))
-        wid_two -= 1
-        wid_one += 1
-        paddle_two.shapesize(stretch_wid=wid_two, stretch_len=1)
-        paddle_one.shapesize(stretch_wid=wid_one, stretch_len=1)
+        if (wid_one != 1 and wid_two != 1) :
+            wid_two -= 1
+            wid_one += 1
+            paddle_two.shapesize(stretch_wid=wid_two, stretch_len=1)
+            paddle_one.shapesize(stretch_wid=wid_one, stretch_len=1)
 
     # Collisions b/w ball & paddle
 
