@@ -95,6 +95,12 @@ while True:
     ball.setx(ball.xcor() + ball.dx)
     ball.sety(ball.ycor() + ball.dy)
 
+	# Winner
+	if score_one == 5:
+		exit()
+	else score_two == 5:
+		exit()
+		
     # Ball's Border checking
     if ball.ycor() > 290:
         ball.sety(290)
@@ -119,6 +125,8 @@ while True:
                           font=("Courier", 24, "normal"))
         wid_one -= 1
         wid_two += 1
+		if wid_one == 1:
+			wid_one += 1
         paddle_one.shapesize(stretch_wid=wid_one, stretch_len=1)
         paddle_two.shapesize(stretch_wid=wid_two, stretch_len=1)
 
@@ -135,6 +143,9 @@ while True:
                           font=("Courier", 24, "normal"))
         wid_two -= 1
         wid_one += 1
+		if wid_two == 1:
+			wid_two += 1
+
         paddle_two.shapesize(stretch_wid=wid_two, stretch_len=1)
         paddle_one.shapesize(stretch_wid=wid_one, stretch_len=1)
 
