@@ -125,7 +125,7 @@ while True:
                           font=("Courier", 24, "normal"))
         wid_one -= 1
         wid_two += 1
-		if wid_one == 0:
+		if wid_one == 1:
 			wid_one += 1
         paddle_one.shapesize(stretch_wid=wid_one, stretch_len=1)
         paddle_two.shapesize(stretch_wid=wid_two, stretch_len=1)
@@ -143,7 +143,7 @@ while True:
                           font=("Courier", 24, "normal"))
         wid_two -= 1
         wid_one += 1
-		if wid_two == 0:
+		if wid_two == 1:
 			wid_two += 1
 
         paddle_two.shapesize(stretch_wid=wid_two, stretch_len=1)
