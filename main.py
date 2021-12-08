@@ -114,6 +114,10 @@ while True:
         else :
             ball.dy = -0.2
         score_one += 1
+		wid_one -= 0.5
+		wid_two += 0.5
+		paddle_one.shapesize(stretch_wid=wid_one, stretch_len=1)
+		paddle_two.shapesize(stretch_wid=wid_two, stretch_len=1)
         write_score.clear()
         write_score.write("Player One: {}           Player Two: {}".format(score_one, score_two), align="center",
                           font=("Courier", 24, "normal"))
@@ -132,6 +136,10 @@ while True:
         else :
             ball.dy = -0.2
         score_two += 1
+		wid_one += 0.5
+		wid_two -= 0.5
+		paddle_one.shapesize(stretch_wid=wid_one, stretch_len=1)
+		paddle_two.shapesize(stretch_wid=wid_two, stretch_len=1)
         write_score.clear()
         write_score.write("Player One: {}           Player Two: {}".format(score_one, score_two), align="center",
                           font=("Courier", 24, "normal"))
