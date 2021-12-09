@@ -94,6 +94,11 @@ while True:
     # Ball Movement
     ball.setx(ball.xcor() + ball.dx)
     ball.sety(ball.ycor() + ball.dy)
+    
+    if score_one == 5:
+        exit()
+    elif score_two == 5:
+        exit()
 
     # Ball's Border checking
     if ball.ycor() > 290:
@@ -118,7 +123,7 @@ while True:
         write_score.write("Player One: {}           Player Two: {}".format(score_one, score_two), align="center",
                           font=("Courier", 24, "normal"))
         
-        if (wid_one != 1 and wid_two != 1) :
+        if (wid_one != 1) :
             wid_one -= 1
             wid_two += 1
             paddle_one.shapesize(stretch_wid=wid_one, stretch_len=1)
@@ -135,7 +140,7 @@ while True:
         write_score.clear()
         write_score.write("Player One: {}           Player Two: {}".format(score_one, score_two), align="center",
                           font=("Courier", 24, "normal"))
-        if (wid_one != 1 and wid_two != 1) :
+        if (wid_two != 1) :
             wid_two -= 1
             wid_one += 1
             paddle_two.shapesize(stretch_wid=wid_two, stretch_len=1)
